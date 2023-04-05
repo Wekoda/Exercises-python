@@ -1,0 +1,23 @@
+v1 = float(input('Digite um valor: '))
+p1 = int(input('Digite a forma de pagamento:\n'
+               '[ 1 ] dinheiro ou cheque\n'
+               '[ 2 ] cartão \n'
+               '[ 3 ] 2x no cartão\n'
+               '[ 4 ] 3x ou mais no cartão \n'
+               'Digite a forma de pagamento: '))
+#calculos
+x = v1 - (v1 * 0.10)
+y = v1- (v1 * 0.05)
+z = (v1 * 0.20) + v1
+#ifs
+if p1 == 1:
+    print('O valor com 10% de desconto fica: R${}'.format(x))
+elif p1 == 2:
+    print('Com 5% de desconto fica: R${}'.format(y))
+elif p1 == 3:
+    print('O valor a ser pago é R${}'.format(v1))
+elif p1 == 4:
+    print('Parcelando em 3x ou mais fica com 20% de juros o valor '
+          'total fica: R${}'.format(z))
+else:
+    print('digite novamente a forma de pagamento')
