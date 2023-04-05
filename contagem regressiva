@@ -1,0 +1,6 @@
+import time
+t1 = int(input('Coloque os segundo a serem contados: '))
+for c in range(t1, 0 , -1):
+    print(c)
+    time.sleep(1)
+print('BOOOOM')
