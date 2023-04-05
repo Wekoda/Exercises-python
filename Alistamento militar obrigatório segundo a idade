@@ -1,0 +1,12 @@
+n1 = int(input('Sua data de nascimento: '))
+x = (2023 - n1)
+y = (x - 18)
+if x == 18:
+    print('Você deve se apresentar a junta militar mais proxima')
+elif x < 18:
+    print('Voce ainda não deve se alistar, faltam {} anos'.format(y))
+else:
+    print('Se ainda não se alistou entre em contato com a junta militar mais proxima, '
+          'segundo a Lei do Serviço Militar. Art. 1º se passaram {} anos que seus '
+          'serviços deveriam ser prestados'.format(y))
+print('Tenha um bom dia')
