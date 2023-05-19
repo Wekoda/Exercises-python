@@ -1,0 +1,31 @@
+class dog:
+    def __init__(self , nome):
+        self.nome = nome
+        print('Que nome bonito {} tem'.format(nome))
+
+    def dograca (self, raca):
+        self.dograca = raca
+        print('O dog é da raça : {} '.format(raca))
+
+    def dogpeso(self , peso):
+        self.dogpeso = peso
+
+        if(self.dogpeso >= 40):
+            print('Atenção a alimentação do doguinho\nEle está acima do peso recomendado')
+
+        elif (self.dogpeso <= 20):
+            print('Atenção a alimentação do doguinho\n'
+                  'ele está abaixo do peso recomendado')
+        else:
+            print('O seu dog está no peso ideal')
+
+ng = str(input('Digite aqui o nome do seu doguinho: '))
+g1 = dog (ng)
+
+rc = str(input('Digite também a sua raça: '))
+g1.dograca(rc)
+
+pg = float(input('Digite o peso do dog: '))
+g1.dogpeso(pg)
+
+print ('{} da raça {}\npesa {}KG'.format(ng, rc, pg))
