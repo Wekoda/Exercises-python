@@ -1,0 +1,42 @@
+class gato:
+    def __init__(self , nome):
+        self.nome = nome
+
+        print('Seu gatinho se chama', self.nome)
+
+    def gatopeso (self, peso):
+        self.peso = peso
+
+        if (self.peso > 5.0):
+            print('Gato gordo')
+
+        elif (self.peso > 3.5):
+            print('gato normal')
+
+        else:
+            print('Gato magrin')
+
+    def dietagato(self):
+        self.msg = 'Tudo ok!'
+
+        if(self.peso < 3.5):
+           self.msg = 'Aumente a Ração'
+
+        elif(self.peso >= 5):
+            self.msg = 'Diminua a ração'
+
+        return self.msg
+
+    def dados (self):
+        print('O gato {} está com {} kg'.format(self.nome , self.peso))
+        print(self.dietagato())
+
+ng = str(input('Digite o nome do seu gato: '))
+
+g1 = gato(ng)
+
+peso = float(input('Digite o peso do bixano: '))
+
+g1.gatopeso(peso)
+
+g1.dados()
