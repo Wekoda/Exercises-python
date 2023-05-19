@@ -1,0 +1,32 @@
+class pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def falar(self):
+        print(f'Meu nome é {self.nome} e eu tenho {self.idade} anos.')
+
+class cliente(pessoa):
+    def __init__(self, nome, idade, cpf):
+        pessoa.__init__(self, nome, idade)
+        self.cpf = cpf
+
+    def falar1(self):
+        print(f'Meu CPF é {self.cpf}.')
+
+class aluno(pessoa):
+    def __init__(self, nome, idade, matricula):
+        pessoa.__init__(self, nome, idade)
+        self.matricula = matricula
+
+    def falar2(self):
+        print(f'A minha matricula é {self.matricula}.')
+
+c1 = cliente('João', 45, '555584678-94')
+
+c2 = aluno('Maria', 21, '123456789')
+c1.falar()
+c1.falar1()
+
+c2.falar()
+c2.falar2()
