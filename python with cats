@@ -1,0 +1,23 @@
+ class gato():
+    def __init__(self, nome):
+
+        self.nome = nome
+        print(f'O nome do seu gatinho é: {self.nome}')
+
+    def falar(self):
+        print(f'{self.nome} diz:\nOlá humano meu nome é {self.nome}')
+        return self.nome
+
+    def miar(self):
+        print(f'{self.nome} diz:\nMiau')
+        return self.nome
+
+
+
+
+
+ng = str(input('Digite o nome do gatinho: ')).strip().capitalize()
+g1 = gato(ng)
+
+g1.falar()
+g1.miar()
