@@ -1,0 +1,56 @@
+class Animal:
+    def __init__(self, nome):
+        self.__nome = nome
+
+    def get_nome(self):
+        return self.__nome
+
+    def cumprimentar(self):
+        return f'Olá, meu nome é {self.__nome}.'
+
+
+class Terrestre(Animal):
+    def __init__(self, nome):
+        super().__init__(nome)
+
+    def andar(self):
+        return f'{self.get_nome()} está andando.'
+
+    def cumprimentar(self):
+        return f'Olá, meu nome é {self.get_nome()}.\n' \
+               f'sou um animal terrestre.'
+
+
+class Aquatico(Animal):
+    def __init__(self, nome):
+        super().__init__(nome)
+
+    def nadar(self):
+        return f'{self.get_nome()} está nadando.'
+
+    def cumprimentar(self):
+        return f'Olá, meu nome é {self.get_nome()}.\n' \
+               f'sou um animal aquático.'
+
+
+class Pinguim (Terrestre, Aquatico):
+    def __init__(self, nome):
+        super().__init__(nome)
+
+
+leao = Terrestre('José')
+print(leao.andar())
+print(leao.cumprimentar())
+print('_-'*20)
+
+
+tubarao = Aquatico('Jorge')
+print(tubarao.nadar())
+print(tubarao.cumprimentar())
+print('_-'*20)
+
+pinuim = Pinguim('Recruta')
+print(pinuim.nadar())
+print(pinuim.andar())
+print(pinuim.cumprimentar())
+print('_-'*20)
