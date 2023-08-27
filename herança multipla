@@ -1,0 +1,59 @@
+class Produto:
+    def __init__(self, referencia, nome, pvp, descricao):
+        self.referencia = referencia
+        self.nome = nome
+        self.pvp = pvp
+        self.descricao = descricao
+
+    def __str__(self):
+        return """\
+    
+REFERENCIA\t{}
+NOME\t{}
+PVP\t{}
+DESCRICAO\t{}""".format(self.referencia, self.nome, self.pvp, self.descricao)
+
+
+class Pc(Produto):
+    pass
+
+
+class Alimento (Produto):
+    criador = ''
+    distribuidor = ''
+
+    def __str__(self):
+        return """\
+REFERENCIA\t{}
+NOME\t\t{}
+DESCRICAO\t\t{}
+CRIADOR\t\t{}
+distribuidor\t{}""".format(self.referencia, self.nome, self.pvp, self.descricao, self.criador, self.distribuidor)
+
+
+class Livro(Produto):
+    isbn = ''
+    autor = ''
+
+    def __str__(self):
+        return """\
+REFERENCIA\t{}
+NOME\t\t{}
+PVP\t\t{}
+DESCRICAO\t{}
+ISNB\t\t{]
+AUTOR\t\t{}""".format(self.referencia, self.nome, self.pvp, self.descricao, self.isbn, self.autor)
+
+
+Prod = Pc(2023, 'Personal Computer', 1200, 'PC da HP')
+
+a1 = Alimento(2035, 'Azeite', 5, '250 ML')
+a1.criador = 'Gallo'
+a1.detribuidor = 'Distribuição SA'
+
+l1 = Livro(2035, 'Guerra e Paz', 5, 'Romance')
+l1.isbn = '0-524244-91-8'
+l1.autor = 'Liev Tolstói'
+
+for p in Produto:
+    print(p, '\n')
